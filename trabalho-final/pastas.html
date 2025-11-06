@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remember</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <style>
+  body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1b2a;
+      color: #fff;
+    }
+
+    nav {
+      background-color: #1b263b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    /* LOGO refinada */
+    .logo {
+      font-family: 'Poppins', sans-serif; /* fonte mais estilosa */
+      font-size: 1.6em;
+      font-weight: 500; /* mais leve que bold */
+      color: #ffffff; /* branco */
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #415a77;
+    }
+
+    .nav-links a.active {
+      background-color: #00b4d8;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-icons i {
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .nav-icons i:hover {
+      color: #00b4d8;
+    }
+
+    .profile {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: #00b4d8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .content {
+      padding-top: 80px;
+      text-align: center;
+    }
+</style>
+</head>
+<body>
+
+ <nav>
+    <div class="logo">Remember</div>
+    <div class="nav-links">
+      <a href="inicio.html">Início</a>
+      <a href="catalogo.html">Catálogos</a>
+      <a href="Quizzes.html">Quizzes</a>
+      <a href="Chats.html">Chats</a>
+      <a href="pastas.html"class="active">Minhas Pastas</a>
+    </div>
+    <div class="nav-icons">
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-search"></i>
+      <div class="profile">B</div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <h1>Minhas pastas</h1>
+    <section class="folders">
+      <div class="folder variant-a">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="rgba(255,255,255,0.12)"/>
+        </svg>
+        Os melhores
+      </div>
+
+      <div class="folder variant-b">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="rgba(255,255,255,0.12)"/>
+        </svg>
+        Ver depois
+      </div>
+
+      <div class="folder variant-a">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="rgba(255,255,255,0.12)"/>
+        </svg>
+        Ler novamente
+      </div>
+
+      <div class="folder variant-b">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="rgba(255,255,255,0.12)"/>
+        </svg>
+        Não iniciados
+      </div>
+
+      <div class="folder add">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="rgba(255,255,255,0.06)"/>
+        </svg>
+        + Adicionar pasta
+      </div>
+    </section>
+  </main>
+
+ 
+
+
+  
+ </body>
+ </html>

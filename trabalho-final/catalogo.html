@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Painel Multimídia com Carrossel</title>
+<style>
+   body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1b2a;
+      color: #fff;
+    }
+
+    nav {
+      background-color: #1b263b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    /* LOGO refinada */
+    .logo {
+      font-family: 'Poppins', sans-serif; /* fonte mais estilosa */
+      font-size: 1.6em;
+      font-weight: 500; /* mais leve que bold */
+      color: #ffffff; /* branco */
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #415a77;
+    }
+
+    .nav-links a.active {
+      background-color: #00b4d8;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-icons i {
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .nav-icons i:hover {
+      color: #00b4d8;
+    }
+
+    .profile {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: #00b4d8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .content {
+      padding-top: 80px;
+      text-align: center;
+    }
+      body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f1c2e;
+      color: white;
+    }
+
+    nav {
+      background-color: #1c2f4a;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    nav ul li:hover {
+      text-decoration: underline;
+    }
+
+    .search-bar {
+      padding: 20px 30px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .container {
+      padding: 0 30px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    .ver-mais {
+      text-align: right;
+      font-size: 14px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      color: #00aaff;
+    }
+
+    .ver-mais:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 10px;
+      scrollbar-color: #00aaff #1c2f4a;
+      scrollbar-width: thin;
+    }
+
+    .section::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .section::-webkit-scrollbar-track {
+      background: #1c2f4a;
+    }
+
+    .section::-webkit-scrollbar-thumb {
+      background-color: #00aaff;
+      border-radius: 4px;
+    }
+
+    .card {
+      display: inline-block;
+      width: 150px;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .card-title {
+      margin-top: 5px;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</style>
+</head>
+<body>
+    <body>
+ 
+  <nav>
+    <div class="logo">Remember</div>
+    <div class="nav-links">
+      <a href="inicio.html">Início</a>
+      <a href="catalogo.html"class="active">Catálogos</a>
+      <a href="Quizzes.html">Quizzes</a>
+      <a href="Chats.html">Chats</a>
+      <a href="pastas.html">Minhas Pastas</a>
+    </div>
+    <div class="nav-icons">
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-search"></i>
+      <div class="profile">B</div>
+    </div>
+  </nav>
+
+   <div class="search-bar">
+    <input type="text" placeholder="Pesquise">
+  </div>
+
+ <div class="container">
+    <h2>🎬 Filmes</h2>
+    <div class="ver-mais">ver mais</div>
+    <div class="section">
+      <div class="card"><img src="img/ainda-estou-aqui.jpg"><div class="card-title">Ainda estou aqui</div></div>
+      <div class="card"><img src="img/Djonga-vertical.jpg"><div class="card-title">Django livre</div></div>
+      <div class="card"><img src="img/sonhos-roubados.jpg"><div class="card-title">Sonhos roubados</div></div>
+      <div class="card"><img src="img/Escritores da liberdade.jpg"><div class="card-title">Escritores da liberdade</div></div>
+      <div class="card"><img src="img/velozes e furiosos.webp"><div class="card-title">Velozes e furiosos</div></div>
+      <div class="card"><img src="img/o-poço.webp"><div class="card-title">O poço</div></div>
+      <div class="card"><img src="img/Homem aranha.jpg"><div class="card-title">O Homem-aranha</div></div>
+    </div>
+
+    <h2>📚 Livros</h2>
+    <div class="ver-mais">ver mais</div>
+    <div class="section">
+      <div class="card"><img src="img/1984.jpg"><div class="card-title">1984</div></div>
+      <div class="card"><img src="img/Quarto de despejo.webp"><div class="card-title">Quarto de Despejo</div></div>
+      <div class="card"><img src="img/O Apanhador.jpg"><div class="card-title">O Apanhador</div></div>
+      <div class="card"><img src="img/Fahrenheit.jpg"><div class="card-title">Fahrenheit 451</div></div>
+      <div class="card"><img src="img/O príncipe cruel.jpg"><div class="card-title">O príncipe cruel</div></div>
+     <div class="card"><img src="img/Vermelho branco e sangue azul.jpg"><div class="card-title">Vermelho branco e sangue azul</div></div>
+     <div class="card"><img src="img/sete-maridos.jpg"><div class="card-title">Os sete maridos de Evelyn Hugo</div></div>
+      <div class="card"><img src="img/aseleção.jpg"><div class="card-title">A seleção</div></div>
+    
+    
+    </div>
+
+    <h2>📺 Séries</h2>
+    <div class="ver-mais">ver mais</div>
+    <div class="section">
+      <div class="card"><img src="img/gossip-girl.jpg"><div class="card-title">Gossip Girl</div></div>
+      <div class="card"><img src="img/b99.jpg"><div class="card-title">Brooklyn Nine-Nine</div></div>
+      <div class="card"><img src="img/uma mulher contra hitler.png"><div class="card-title">Uma mulher contra hitler</div></div>
+        <div class="card"><img src="img/big.jpg"><div class="card-title">The big bang theory</div></div>
+          <div class="card"><img src="img/Bridgerton.webp"><div class="card-title">Bridgerton </div></div>
+            <div class="card"><img src="img/uma mulher contra hitler.png"><div class="card-title">Uma mulher contra hitler</div></div>
+              <div class="card"><img src="img/uma mulher contra hitler.png"><div class="card-title">Uma mulher contra hitler</div></div>
+    </div>
+  </div>
+
+</body>
+</html>

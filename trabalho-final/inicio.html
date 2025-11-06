@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remember</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1b2a;
+      color: #fff;
+    }
+
+    nav {
+      background-color: #1b263b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    /* LOGO refinada */
+    .logo {
+      font-family: 'Poppins', sans-serif; /* fonte mais estilosa */
+      font-size: 1.6em;
+      font-weight: 500; /* mais leve que bold */
+      color: #ffffff; /* branco */
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #415a77;
+    }
+
+    .nav-links a.active {
+      background-color: #00b4d8;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-icons i {
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .nav-icons i:hover {
+      color: #00b4d8;
+    }
+
+    .profile {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: #00b4d8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .content {
+      padding-top: 80px;
+      text-align: center;
+    }
+    .jdonga{
+       max-width: 100%;
+  height: auto;
+  transition: transform 0.7s ease-in-out;
+  border-radius: 8px; /* Opcional: cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    }
+    .jgonga:hover {
+  transform: scale(1.05); /* Leve zoom */
+}
+
+.carousel {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.7s ease-in-out;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slide img:hover {
+  transform: scale(1.05);
+}
+.carousel {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+ width: 100%;
+  height: 420px; /* altura fixa para todas as imagens */
+  object-fit: cover; /* preenche sem deformar */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slide img:hover {
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Remember</div>
+    <div class="nav-links">
+      <a href="inicio.html" class="active">Início</a>
+      <a href="catalogo.html">Catálogos</a>
+      <a href="Quizzes.html">Quizzes</a>
+      <a href="Chats.html">Chats</a>
+      <a href="pastas.html">Minhas Pastas</a>
+    </div>
+    <div class="nav-icons">
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-search"></i>
+      <div class="profile">B</div>
+    </div>
+  </nav>
+
+    <section class="carousel">
+    <div class="slides">
+      <div class="slide active">
+        <img src="img/djonga.png" alt="Imagem 1"class="djonga">
+      </div>
+      <div class="slide">
+        <img src="img/ainda-estou aqui-horizontal.webp" alt="Imagem 2">
+      </div>
+      <div class="slide">
+        <img src="img/tropa-de-elite.jpg" alt="Imagem 3">
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+
+
+</body>
+</html>

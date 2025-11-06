@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Quizzes | Remember</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #011A33;
+      color: #FFFFFF;
+      
+    }
+
+    header {
+      background-color: #03305D;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #FFFFFF;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .banner {
+      background-color: #02294A;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .banner h1 {
+      font-size: 28px;
+      color: #FFFFFF;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 60%;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: #03305D;
+      color: #FFFFFF;
+    }
+
+    .quiz-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .quiz-card {
+      background-color: #02294A;
+      width: 280px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .quiz-card:hover {
+      transform: scale(1.02);
+    }
+
+    .quiz-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .quiz-card h3 {
+      margin: 15px 10px;
+      font-size: 18px;
+      color: #FFFFFF;
+    }
+
+    .quiz-card a {
+      display: inline-block;
+      margin: 10px 0 20px;
+      padding: 10px 20px;
+      background-color: #6c63ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .quiz-card a:hover {
+      background-color: #554ee6;
+    }
+    nav {
+      background-color: #1b263b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    /* LOGO refinada */
+    .logo {
+      font-family: 'Poppins', sans-serif; /* fonte mais estilosa */
+      font-size: 1.6em;
+      font-weight: 500; /* mais leve que bold */
+      color: #ffffff; /* branco */
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #415a77;
+    }
+
+    .nav-links a.active {
+      background-color: #00b4d8;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-icons i {
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .nav-icons i:hover {
+      color: #00b4d8;
+    }
+
+    .profile {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: #00b4d8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .content {
+      padding-top: 80px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+    <nav>
+    <div class="logo">Remember</div>
+    <div class="nav-links">
+      <a href="inicio.html" >Início</a>
+      <a href="catalogo.html">Catálogos</a>
+      <a href="Quizzes.html"class="active">Quizzes</a>
+      <a href="Chats.html">Chats</a>
+      <a href="pastas.html">Minhas Pastas</a>
+    </div>
+    <div class="nav-icons">
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-search"></i>
+      <div class="profile">B</div>
+    </div>
+  </nav>
+
+  <div class="banner">
+    <h1>QUEM EU SERIA NESSA FICÇÃO?</h1>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Pesquise...">
+  </div>
+
+  <div class="quiz-container">
+    <div class="quiz-card">
+      <img src="c:\Users\TEMP.SENACLOCAL.001\Documents\vscodigo\fotos\celia.jpg" alt="Quem é você">
+      <h3>Quem é você?</h3>
+      <a href="https://pt.quizur.com/quiz/quem-voce-seria-em-os-sete-maridos-de-evelyn-hugo-KgT1">Começar Quiz</a>
+    </div>
+
+    <div class="quiz-card">
+      <img src="c:\Users\TEMP.SENACLOCAL.001\Documents\vscodigo\fotos\bridge.jpg" alt="Bridgerton">
+      <h3>Você conhece tudo sobre 'Bridgerton'?</h3>
+      <a href="https://pt.quizur.com/trivia/voce-conhece-tudo-de-bridgerton-NiqU">Começar Quiz</a>
+    </div>
+
+    <div class="quiz-card">
+      <img src="c:\Users\TEMP.SENACLOCAL.001\Documents\vscodigo\fotos\harry potter.jpg" alt="Harry Potter">
+      <h3>Qual sua casa de 'Harry Potter'?</h3>
+      <a href="https://pt.quizur.com/trivia/voce-conhece-tudo-de-bridgerton-NiqU">Começar Quiz</a>
+    </div>
+    
+    <div class="quiz-card">
+      <img src="c:\Users\TEMP.SENACLOCAL.001\Documents\vscodigo\fotos\download.jpg" alt="Harry Potter">
+      <h3>10 perguntas sobre Grey's Anatomy</h3>
+      <a href="https://pt.quizur.com/trivia/10-perguntas-sobre-grey-s-anatomy-NVWu">Começar Quiz</a>
+    </div>
+    
+    <div class="quiz-card">
+      <img src="c:\Users\TEMP.SENACLOCAL.001\Documents\vscodigo\fotos\netflix-1-1.webp" alt="Harry Potter">
+      <h3>Qual seu estilo de filme?</h3>
+      <a href="https://pt.quizur.com/quiz/quem-voce-seria-em-os-sete-maridos-de-evelyn-hugo-KgT1">Começar Quiz</a>
+    </div>
+    
+    <div class="quiz-card">
+      <img src="c:\Users\TEMP.SENACLOCAL.001\Documents\vscodigo\fotos\557549246_2296019350860396_5581518121315699701_n.png" alt="Harry Potter">
+      <h3>Você sabe tudo sobre o "Pequeno Princípe?"</h3>
+      <a href="https://pt.quizur.com/quiz/quem-voce-seria-em-os-sete-maridos-de-evelyn-hugo-KgT1">Começar Quiz</a>
+    </div>
+    
+    <div class="quiz-card">
+      <img src="c:\Users\TEMP.SENACLOCAL.001\Documents\vscodigo\fotos\images.png" alt="Harry Potter">
+      <h3>Você conhece o cinema nacional?</h3>
+      <a href="https://pt.quizur.com/quiz/quem-voce-seria-em-os-sete-maridos-de-evelyn-hugo-KgT1">Começar Quiz</a>
+    </div>Potter
+    
+    <div class="quiz-card">
+      <img src="c:\Users\TEMP.SENACLOCAL.001\Documents\vscodigo\fotos\download (1).jpg" alt="Harry Potter">
+      <h3>O quanto você sabe sobre Games of Thrones?</h3>
+      <a href="https://pt.quizur.com/quiz/quem-voce-seria-em-os-sete-maridos-de-evelyn-hugo-KgT1">Começar Quiz</a>
+    </div>
+  </div>
+  
+
+</body>
+</html>

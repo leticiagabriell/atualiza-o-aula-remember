@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remember Intro</title>
+  <style>
+    /* ======= RESET ======= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ======= FUNDO ======= */
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(180deg, #0084FF 90%, #0060B5 49%, #074079 0%);
+      background-size: 200% 200%;
+      animation: bgMove 10s ease-in-out infinite alternate;
+      overflow: hidden;
+      position: relative;
+      font-family: "Poppins", sans-serif;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    /* ======= SOMBRA CENTRAL ======= */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      filter: blur(100px);
+      opacity: 0.3;
+      animation: glowPulse 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      0% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); }
+      100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1.1); }
+    }
+
+    /* ======= LOGO ======= */
+    .logo {
+      position: relative;
+      z-index: 2;
+      width: 140px;
+      height: auto;
+      opacity: 0;
+      transform: translateY(60px) scale(0.9) rotateX(15deg);
+      animation: logoRise 11s ease-in-out forwards;
+    }
+
+    @keyframes logoRise {
+      0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9) rotateX(15deg);
+      }
+      25% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotateX(0deg);
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1.05);
+      }
+      80% {
+        opacity: 1;
+        transform: translateY(-60px) scale(1);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(-80px) scale(1);
+      }
+    }
+
+    /* ======= BRILHO NA LOGO ======= */
+    .logo::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+      transform: skewX(-25deg);
+      animation: shine 6s ease-in-out infinite;
+    }
+
+    @keyframes shine {
+      0% { left: -75%; }
+      50% { left: 125%; }
+      100% { left: 125%; }
+    }
+
+    /* ======= BOTÃO DE ENTRADA ======= */
+    .btn-enter {
+      margin-top: 100px;
+      padding: 14px 36px;
+      font-size: 1.1rem;
+      color: #fff;
+      background: linear-gradient(90deg, #00B7FF, #0060B5);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.5s ease;
+      animation: showButton 1.2s ease-out forwards;
+      animation-delay: 8s; /* aparece depois da logo */
+    }
+
+    @keyframes showButton {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Efeito de hover */
+    .btn-enter:hover {
+      transform: translateY(-3px) scale(1.05);
+      background: linear-gradient(90deg, #33CFFF, #0078D4);
+      box-shadow: 0 0 25px rgba(0, 183, 255, 0.6);
+    }
+
+    .btn-enter:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+<body>
+  <!-- Substitua pelo ícone da cabeça com relógio -->
+  <img src="logo-remember.png" alt="Remember Logo" class="logo" />
+
+  <!-- Botão de entrada -->
+  <button class="btn-enter" onclick="entrar()">Entrar</button>
+
+  <script>
+    // Efeito opcional: fade da introdução ao entrar
+    function entrar() {
+      document.body.style.transition = "opacity 1s ease";
+      document.body.style.opacity = "0";
+      setTimeout(() => {
+        // redireciona para sua página principal
+        window.location.href = "home.html";
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
