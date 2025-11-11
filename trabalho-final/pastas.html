@@ -1,20 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Remember</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <style>
-  body {
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Remember — Minhas pastas</title>
+  <style>
+    body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1b2a;
-      color: #fff;
+      font-family: sans-serif;
+      background-color: #0f172a;
+      color: #e5e7eb;
+    }
+
+    header {
+      background-color: #111827;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     nav {
+      display: flex;
+      gap: 1em;
+    }
+
+    nav a {
+      color: #9ca3af;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      border-radius: 0.5em;
+    }
+
+    nav a.active {
+      background-color: #1f2937;
+      color: #e5e7eb;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+    }
+
+    main {
+      padding: 2em;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    .folders {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5em;
+    }
+
+    .folder {
+      background-color: #1f2937;
+      border-radius: 1em;
+      padding: 1em;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .folder:hover {
+      background-color: #374151;
+    }
+
+    .folder-icon {
+      background-color: #0b1225;
+      border-radius: 0.5em;
+      padding: 0.5em;
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+
+    .folder h2 {
+      margin: 0.5em 0 0.2em;
+      font-size: 1.1em;
+    }
+
+    .folder p {
+      margin: 0;
+      font-size: 0.9em;
+      color: #9ca3af;
+    }
+     nav {
       background-color: #1b263b;
       display: flex;
       justify-content: space-between;
@@ -93,11 +168,48 @@
       padding-top: 80px;
       text-align: center;
     }
-</style>
+      body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f1c2e;
+      color: white;
+    }
+
+    nav {
+      background-color: #1c2f4a;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    nav ul li:hover {
+      text-decoration: underline;
+    }
+
+  </style>
 </head>
 <body>
 
- <nav>
+  <nav>
     <div class="logo">Remember</div>
     <div class="nav-links">
       <a href="inicio.html">Início</a>
@@ -113,49 +225,46 @@
     </div>
   </nav>
 
-  <main class="wrap">
+
+  <main>
     <h1>Minhas pastas</h1>
     <section class="folders">
-      <div class="folder variant-a">
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="rgba(255,255,255,0.12)"/>
-        </svg>
-        Os melhores
+      <div><a href=""><i class="fa-solid fa-folders"></i></a></div>
+        <h2>Os melhores</h2>
+        <p>Conteúdos favoritos e de alto impacto.</p>
       </div>
-
-      <div class="folder variant-b">
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="rgba(255,255,255,0.12)"/>
-        </svg>
-        Ver depois
+      <div><a href=""><i class="fa-solid fa-folders"></i></a></div>
+        <h2>Ver depois</h2>
+        <p>Guarde para revisar com calma.</p>
       </div>
-
-      <div class="folder variant-a">
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="rgba(255,255,255,0.12)"/>
-        </svg>
-        Ler novamente
+      <div><a href=""><i class="fa-solid fa-folders"></i></a></div>
+        <h2>Ler novamente</h2>
+        <p>Materiais que merecem uma segunda leitura.</p>
       </div>
-
-      <div class="folder variant-b">
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="rgba(255,255,255,0.12)"/>
-        </svg>
-        Não iniciados
+      <div class="folder">
+        <div><a href=""><i class="fa-solid fa-folders"></i></a></div>
+        <h2>Não iniciados</h2>
+        <p>Itens que você ainda não começou.</p>
       </div>
-
-      <div class="folder add">
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="rgba(255,255,255,0.06)"/>
-        </svg>
-        + Adicionar pasta
+   <div><a href=""><i class="fa-solid fa-folder-medical"></i></a></div>
+        <h2>+ Adicionar pasta</h2>
+        <p>Crie uma nova pasta personalizada.</p>
       </div>
     </section>
   </main>
 
- 
+</body>
+</html>
 
 
-  
- </body>
- </html>
+
+
+
+
+
+
+
+
+
+
+
